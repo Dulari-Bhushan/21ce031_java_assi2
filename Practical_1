@@ -1,0 +1,40 @@
+Import java.util.Scanner;
+
+
+public class A {
+        private double radius;
+
+        public A() //no-argumentconstructo  default valueis1 
+        {
+            radius = 1;
+        }
+        public A(double radius) //Single argument constructor 
+        {
+            this.radius = radius;
+        }
+        public double getArea() // getarea method 
+        {
+            return 22*radius*radius/7;
+        }
+        public double getPerimeter() // getparimeter  method 
+        {
+            return 2*22*radius/7;
+        }
+
+}
+
+public class M {
+
+
+        public static void main(String[] args) {
+            A object1 = new A(); // create object of class file 
+            System.out.print("Enter The Argument for Radius -> ");
+            Scanner sc = new Scanner(System.in);
+            double a = sc.nextDouble();  // take a input from user 
+
+            A object2 = new A(a); // create  2nd object  of class file with parameter 
+
+            System.out.println("Area and Perimeter of Circle for default argument 1 : "+object1.getArea()+" and "+object1.getPerimeter());
+            System.out.println("Area and Perimeter of Circle for argument  " + a + "  : "+object2.getArea()+" and "+object2.getPerimeter());
+        }
+    }
